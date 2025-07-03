@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import Logo from './assets/logo.png'
 
 function App() {
   const [urlInput, setUrlInput] = useState<string>("");
@@ -34,7 +35,7 @@ function App() {
 
   return (
     <div className="app">
-
+      <img src={Logo} alt="Tube Preview Logo" className='logo' />
       <h1>Tube Preview</h1>
       <p className='description'>Resuma vídeos do Youtube apenas com a URL do vídeo</p>
       <form action="" className='form' onSubmit={handleSubmit}>

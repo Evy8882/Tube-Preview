@@ -86,3 +86,9 @@ button:hover{
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+.logo{
+  max-width: 150px;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}

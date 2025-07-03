@@ -24,6 +24,9 @@ CORS(app)
 @app.route('/', methods=['GET'])
 def index():
     video = request.args.get('video', type=str)
+
+    if not (video.startswith("https://youtu.be/") or video.startswith("https://www.youtube.com/") or video.startswith("https://youtube.com/")):
+        return "URL de vídeo inválida. Certifique-se de que a URL começa com https://youtu.be/, https://www.youtube.com ou https://youtube.com."
     
     yt = YouTube(video)
     
